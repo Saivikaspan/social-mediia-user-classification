@@ -1,0 +1,66 @@
+
+
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Classification Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        .category {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .profile-data {
+            text-align: left;
+        }
+        .profile-data li {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Profile Classification Result</h1>
+        <div class="category">Category: {{ category }}</div>
+        <div class="profile-data">
+            <ul>
+                <li><strong>Bio:</strong> {{ profile_data.bio }}</li>
+                <li><strong>Followers:</strong> {{ profile_data.followers }}</li>
+                <li><strong>Following:</strong> {{ profile_data.following }}</li>
+                <li><strong>Post Count:</strong> {{ profile_data.post_count }}</li>
+                <li><strong>Is Private:</strong> {{ profile_data.is_private }}</li>
+                <li><strong>Is Verified:</strong> {{ profile_data.is_verified }}</li>
+                <li><strong>External URL:</strong> {{ profile_data.external_url }}</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
